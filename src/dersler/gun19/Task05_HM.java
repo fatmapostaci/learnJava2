@@ -9,8 +9,14 @@ public class Task05_HM {
     static Scanner s = new Scanner(System.in);
 
     public static void main(String[] args) {
+        menu();
+    }
+
+
+    public static void menu() {
         Task05_HM_Methodlar obj = new Task05_HM_Methodlar();
         String metin="";
+        System.out.println("NOT: 3+5.0 yada 15.5/5 yada 1.2*2.5 formatında pozitif değerler kabul edilmektedir" );
         do {
 
             System.out.println("Yapmak istediğiniz işlemi girin: ");
@@ -30,7 +36,6 @@ public class Task05_HM {
             };
             System.out.println(metin + " =  " + output);
         } while (obj.islemKabulEdildi(metin));
+
     }
-
-
 }//Class sonu

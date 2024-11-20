@@ -2,7 +2,7 @@ package dersler.gun19;
 
 import java.util.Scanner;
 
-public class Task12_Main {
+public class Task12_MailFormat_Run {
     static Scanner input = new Scanner(System.in);//gunes eyledim ki herkeşler erişebile
     /*
         Task-> girilen meyılın doğrulugunu aşağıdaki şartlarda  control eden METHOD create ediniz.
@@ -17,7 +17,7 @@ public class Task12_Main {
         while(endOfLoop==false){
             System.out.print("Enter mail adress: ");
             final String mail = input.next();
-            Task12_Methods methods = new Task12_Methods();
+            Task12_MailFormat_Methods methods = new Task12_MailFormat_Methods();
             boolean isMailValid = methods.isFormatAccepted(mail);
             if(isMailValid){
                 System.out.println("Mail accepted");

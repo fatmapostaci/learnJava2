@@ -1,16 +1,12 @@
 package dersler.gun19;
 
-public class Task12_Methods {
+public class Task12_MailFormat_Methods {
     /*
             Task-> girilen meyılın doğrulugunu aşağıdaki şartlarda  control eden METHOD create ediniz.
         1- @ karakteri olmalı
         2- . (nokta) karakteri olmalı
         3- @ karakterinden önce mutlaka en az bir karakter olmalı.
-        Example:
-        "@gmail.com"-> false
-        "@gmailcom"-> false
-        "gmail.com"-> false
-        "ebıkGabık@gmail.com"-> true
+        4- com ile bittiği kontrolü
      */
     public boolean isFormatAccepted(String s) {
         if( isDotIncluded(s) &&
