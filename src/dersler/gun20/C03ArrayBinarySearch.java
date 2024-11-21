@@ -34,8 +34,6 @@ public class C03ArrayBinarySearch {
         System.out.println("after sorting = " + Arrays.toString(sayiArr));
 
         System.out.println("Arrays.binarySearch(sayiArr,control) = " + Arrays.binarySearch(sayiArr, control));
-
-
     }
 
 }

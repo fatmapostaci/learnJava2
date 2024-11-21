@@ -24,7 +24,6 @@ public class C01Arrays {
         Integer [] numbersWrap = new Integer[5]; // [null,null,null,null,null] hem decleration hem creation beraber yapıldı//System.out.println("Arrays.toString(numbersWrap) = " + Arrays.toString(numbersWrap));
         String names[] = new String[3];
 
-
         // Array lere değer attaması yapmak
         // Arrayin Son elemanına değer atama
         numbers[numbers.length-1] = 10;
