@@ -1,13 +1,19 @@
 package codeChallenge.gun4.kelimeOyunu;
 
+import java.util.ArrayList;
 import java.util.Scanner;
 
 public class Word {
      static Scanner scanf=new Scanner(System.in);
 
+    static void getWord(Player a){
+        System.out.print(a.playerName + " Oyun için bir kelime gir : ");
+        a.word =  scanf.next();
+        System.out.println(a.playerName +" -->  *" + a.getWord() + "* kelimesini girdi");
+    }
     static boolean isAccepted(Player a, Player b){
         String word=a.word;
-        System.out.print(b.playerName + " --> Do you accept the word *"+ word +"* form "+a.playerName+": (YES/NO) ");
+        System.out.print(b.playerName + " --> *"+ word +"* kelimesini kabul ediyor musun : (YES/NO) ");
         String y_n = scanf.next();
         if (y_n.equalsIgnoreCase("YES") ){
             b.setWordAccepted(true);
@@ -36,11 +42,7 @@ public class Word {
     private static int wordLenght(String s){
         return s.length();
     }
-    static void getWord(Player a){
-        System.out.print(a.playerName + " Oyun için bir kelime gir : ");
-        a.word =  scanf.next();
-        System.out.println(a.playerName +" -->  *" + a.getWord() + "* kelimesini girdi");
-        }
+
     static void printWord(String word){
         System.out.println("word = " + word);
     }

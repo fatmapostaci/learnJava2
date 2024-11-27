@@ -24,32 +24,37 @@ public class Oyun {
 
      */
     public static void main(String[] args) {
-        ArrayList<Player> oList = new ArrayList<>();
-        Player oyuncu1  = new Player();
-        oList.add(oyuncu1);
 
+        Player oyuncu1 = new Player();
         Player oyuncu2 = new Player();
-        oList.add(oyuncu2);
-
-
-        OyunuBaslat(oyuncu1,oyuncu2);
-
-    }
-    public static void OyunuBaslat(Player oyuncu1,Player oyuncu2) {
-
         oyuncu1.setOyuncu();
-        Word.getWord(oyuncu1);
         oyuncu2.setOyuncu();
 
-        boolean continueOrEnd = Word.isAccepted(oyuncu1,oyuncu2);
+        ArrayList<Player> oList = new ArrayList<>();
+        oList.add(oyuncu1);
+        oList.add(oyuncu2);
+        OyunuBaslat(oList);
 
-        while (continueOrEnd){
-            System.out.println( oyuncu1.getPlayerId()+ ". oyuncunun puanı " + oyuncu1.getPlayerScore() );
-            Word.getWord(oyuncu2);
-            continueOrEnd = Word.isAccepted(oyuncu2,oyuncu1);
+    }
+
+    public static void OyunuBaslat(ArrayList<Player> players) {
+        int a = 0, b = 1;
+        while (true) {
+            int temp = a;
+            a = b;
+            b = temp;
+            System.out.println("a = " + a);
+            System.out.println("b = " + b);
+
+            Word.getWord(players.get(a));
+
+            boolean continueOrEnd = Word.isAccepted( players.get(a),players.get(b) );
+            System.out.println(" fatma = " + players.get(0).getWord() + " " + players.get(0).getPlayerScore());
+            System.out.println(" bilal = " + players.get(1).getWord() + " " + players.get(1).getPlayerScore());
+            if (continueOrEnd==false)
+                break;
+
+
         }
-        Word.endTheGame();
-
-
     }
 }

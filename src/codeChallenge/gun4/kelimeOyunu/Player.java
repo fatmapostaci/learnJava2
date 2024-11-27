@@ -3,7 +3,7 @@ package codeChallenge.gun4.kelimeOyunu;
 import java.util.Scanner;
 
 public class Player {
-    int playerId = 000;
+    static int playerId = 000;
     String playerName;
     String word="";
     int playerScore=0;
@@ -14,7 +14,6 @@ public class Player {
         System.out.print("Oyuncu adı girin: ");
         setPlayerName(scanner.next());
         setPlayerId(+1);
-
     }
     public int getPlayerId() {
         return playerId;
@@ -28,7 +27,6 @@ public class Player {
     public void setPlayerId(int playerId) {
         this.playerId = playerId;
     }
-
     public void setPlayerScore(int playerScore) {
         this.playerScore += playerScore;
     }
