@@ -4,10 +4,11 @@ import java.util.Scanner;
 
 public class Player {
     static int playerId = 000;
-    String playerName;
-    String word="";
-    int playerScore=0;
-    boolean acceptWord;
+    private String playerName;
+    private String word="";
+    private String ek="";
+    private int playerScore=0;
+    private boolean acceptWord;
 
     static Scanner scanner =new Scanner(System.in);
     public void setOyuncu(){
@@ -25,7 +26,7 @@ public class Player {
         return playerScore;
     }
     public void setPlayerId(int playerId) {
-        this.playerId = playerId;
+        Player.playerId = playerId;
     }
     public void setPlayerScore(int playerScore) {
         this.playerScore += playerScore;
@@ -37,8 +38,13 @@ public class Player {
         return word;
     }
     public void setWord (String word){
-        this.word += word;
-       // this.word = word;
+        this.word = word;
+    }
+    public  String getEkKelime(){
+        return ek;
+    }
+    public void setEkKelime(String ek){
+        this.ek= ek;
     }
     public void setWordAccepted(boolean acceptWord){
         this.acceptWord = acceptWord;

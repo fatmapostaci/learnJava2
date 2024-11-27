@@ -40,18 +40,17 @@ public class Oyun {
     public static void OyunuBaslat(ArrayList<Player> players) {
         int a = 0, b = 1;
         while (true) {
-            int temp = a;
+            int temp = a;  // burada döngü başa döndükçe temp değişkenini -> arraylistin 0 ve 1 indexleri üzerine oyuncu değişikliği için düzenledim
             a = b;
             b = temp;
-            System.out.println("a = " + a);
-            System.out.println("b = " + b);
 
-            Word.getWord(players.get(a));
+            Word.getWord(players.get(a));  // yeni kelimeyi  döngü başa döndükçe oyuncu değiştiği için her zaman farklı kullanıcıdan istiyor
 
-            boolean continueOrEnd = Word.isAccepted( players.get(a),players.get(b) );
-            System.out.println(" fatma = " + players.get(0).getWord() + " " + players.get(0).getPlayerScore());
-            System.out.println(" bilal = " + players.get(1).getWord() + " " + players.get(1).getPlayerScore());
-            if (continueOrEnd==false)
+            boolean continueOrEnd = Word.addWordToPlayer( players.get(a),players.get(b) );   //word classında methodlar her zaman a oyuncusuna kelime soracak, b oyuncusu puan alacak
+            System.out.println("Skor tablosu ->>" + players.get(a).getPlayerName() + "=" + players.get(a).getPlayerScore()+
+                    " "+ players.get(b).getPlayerName() + "=" + players.get(b).getPlayerScore());
+
+            if (!continueOrEnd)  //devam etmek istenmediğinde oyun sonlanır
                 break;
 
 
