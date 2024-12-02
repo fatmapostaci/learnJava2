@@ -1,7 +1,7 @@
 package OCA;
 
 public class Varargs {
-    void m1(int a, int... b){
+  /*  void m1(int a, int... b){
 
         System.out.println(b.length);
     }
@@ -12,7 +12,7 @@ public class Varargs {
     void m1(String... e, int f){
         System.out.println(e.length);
     }
-     */
+
     public static void main(String[] args) {
 
         Varargs vrg=new Varargs();
@@ -21,10 +21,10 @@ public class Varargs {
         vrg.m1('c',75,80,90);
         vrg.m1('d',"Hello");
     }
-}
+}*/
 
-/*
-public class Ornek {
+
+//public class Ornek {
 
         void o1( int... b){
 
@@ -37,9 +37,9 @@ public class Ornek {
 
         public static void main(String[] args) {
 
-            Ornek vrg=new Ornek();
+            Varargs vrg=new Varargs();
             vrg.o1(1,2,3,4,5,6,7);
+            vrg.o1('a',4,6,7,8,9);
 
         }
     }
- */

@@ -24,6 +24,10 @@ public class C02nCopies {
         countryList.addAll(1,ekCountryList);
 
         System.out.println("countryList = " + countryList);
-
+        List<String> lines = new ArrayList<>();
+        lines.add("12");
+        System.out.println(lines.remove(0));
+        System.out.println(lines.remove("12"));
+        //System.out.println(lines.contains(12));
     }
 }
