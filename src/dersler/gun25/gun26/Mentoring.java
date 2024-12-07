@@ -1,12 +1,8 @@
-package dersler.gun26;
-
-import OCA.DateTime;
+package dersler.gun25.gun26;
 
 import java.time.*;
 import java.time.format.DateTimeFormatter;
 import java.time.temporal.ChronoField;
-import java.util.Date;
-import java.util.Formatter;
 
 public class Mentoring {
     public static void main(String[] args) {

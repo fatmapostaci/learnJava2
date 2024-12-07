@@ -58,6 +58,11 @@ public class C01Arrays {
             System.out.println("Döngü esnasında " + (i+1) + ". array elemanının değeri = "+ num );
         }
 
+        //char [] array
+        String isim = "Fatma Postacı";
+        char[] karakterler = new char[5];
+        isim.getChars(0,5,karakterler,0);
+        System.out.println(karakterler);
     }
 
 }
