@@ -1,4 +1,4 @@
-package gun31;
+package dersler.gun31;
 
 public class StaticKeyWord {
 

@@ -1,4 +1,4 @@
-package gun30.arac.Tasks.arac;
+package dersler.arac;
 
 public class Arac {
     String model;
