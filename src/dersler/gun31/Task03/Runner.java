@@ -14,16 +14,26 @@ public class Runner {
 
     public static void main(String[] args) {
 
-        Lesson calculus = new Lesson("Calculus",6);
-        Lesson physics = new Lesson("Physics",4);
-        Lesson biology = new Lesson("Biology",3);
+        Lesson calculus = new Lesson("Calculus", 6);
+        Lesson physics = new Lesson("Physics", 4);
+        Lesson biology = new Lesson("Biology", 3);
 
         Student student1 = new Student("Fatma", 10);
 
-        boolean isAdded = student1.addLesson(calculus);
-        if(isAdded) System.out.println("Lesson ADDED");
-        else System.out.println("Lesson couldn't be added");
+        if (student1.sumOfCredits() > 0)
+            student1.listOfLesson.add(calculus);
+        System.out.println(student1);
 
-        int totalCredit = student1.sumOfCredits();
+        if (student1.sumOfCredits() > 0)
+            student1.listOfLesson.add(physics);
+
+        System.out.println(student1);
+
+        if (student1.sumOfCredits() > 0)
+            student1.listOfLesson.add(biology);
+
+        System.out.println(student1);
+
+
     }
 }

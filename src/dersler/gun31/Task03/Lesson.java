@@ -24,6 +24,14 @@ public class Lesson {
 
     }
 
+    @Override
+    public String toString() {
+        return "Lesson{" +
+                "name='" + name + '\'' +
+                ", credit=" + credit +
+                '}';
+    }
+
     public String getName() {
         return name;
     }

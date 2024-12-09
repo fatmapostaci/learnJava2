@@ -14,8 +14,8 @@ public class Student {
 
      */
     private String name;
-    private int maxCredit;
-    private List<Lesson> listOfLesson;
+    private int maxCredit = 10;
+    public List<Lesson> listOfLesson;
 
     public Student(String name, int maxCredit) {
         this.name = name;
@@ -23,19 +23,24 @@ public class Student {
         this.listOfLesson =new ArrayList<>();
     }
 
-    public int sumOfCredits(){
-        for (Lesson l : listOfLesson)
-            this.maxCredit+= l.getCredit();
-        return maxCredit;
+    @Override
+    public String toString() {
+        return "Student{" +
+                "name='" + name + '\'' +
+                ", maxCredit=" + maxCredit +
+                ", listOfLesson=" + listOfLesson +
+                '}';
     }
-    public  boolean addLesson(Lesson lesson){
-        boolean accepted = false;
-        int credit = lesson.getCredit();
-        if ( (credit+maxCredit)<=10  ){
-            maxCredit+=credit;
-            accepted=true;
-        }
-        return accepted;
+
+    public int sumOfCredits(){
+        int sumOfCredits=0;
+        for (Lesson l : listOfLesson)
+            sumOfCredits+=l.getCredit();
+
+        if( sumOfCredits < getMaxCredit() )
+            return 1;
+        else
+            return -1;
     }
 
     public String getName() {
@@ -54,11 +59,4 @@ public class Student {
         this.maxCredit = maxCredit;
     }
 
-    public List<Lesson> getLesson() {
-        return lesson;
-    }
-
-    public void setLesson(List<Lesson> lesson) {
-        this.lesson = lesson;
-    }
 }
