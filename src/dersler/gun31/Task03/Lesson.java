@@ -16,6 +16,7 @@ public class Lesson {
 
     public Lesson(String name, int credit) {
         this.name = name;
+        //herhangi bir ders 10 kredinin üzerinde girilirse program sonlanır
         if (!(credit > 0 && credit < 10)) {
             System.out.println("credit (1-10 arasında değer almalı)");
             System.exit(0);

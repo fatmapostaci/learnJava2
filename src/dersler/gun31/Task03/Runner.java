@@ -19,20 +19,32 @@ public class Runner {
         Lesson biology = new Lesson("Biology", 3);
 
         Student student1 = new Student("Fatma", 10);
-
-        if (student1.sumOfCredits() > 0)
+/*
+ ** if statement-> student objesine yeni ders eklemeden önce
+ * öğrencinin toplam kredisinin 10u geçip geçmeyeceği ile karşılaştırıyoruz
+ */
+        if (student1.sumOfCredits()) {
             student1.listOfLesson.add(calculus);
-        System.out.println(student1);
+            System.out.println(calculus.getName() + " dersi eklendi.");
+            System.out.println(student1);
+        } else
+            System.out.println(calculus.getName() + " dersi eklenemedi.");
 
-        if (student1.sumOfCredits() > 0)
+
+        if (student1.sumOfCredits()) {
             student1.listOfLesson.add(physics);
+            System.out.println(physics.getName() + " dersi eklendi.");
+            System.out.println(student1);
+        } else
+            System.out.println(physics.getName() + " dersi eklenemedi.");
 
-        System.out.println(student1);
 
-        if (student1.sumOfCredits() > 0)
+        if (student1.sumOfCredits()) {
             student1.listOfLesson.add(biology);
-
-        System.out.println(student1);
+            System.out.println(biology.getName() + " dersi eklendi.");
+            System.out.println(student1);
+        } else
+            System.out.println(biology.getName() + " dersi eklenemedi.");
 
 
     }

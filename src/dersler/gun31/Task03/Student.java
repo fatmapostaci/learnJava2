@@ -32,15 +32,22 @@ public class Student {
                 '}';
     }
 
-    public int sumOfCredits(){
+    /**
+     *  student nesnesine eklenen derslerin creditlerini toplayıp
+     *  maxCredit ile karşılaştırıyoruz
+     *
+     * @return  öğrencinin toplam creditleri maxCredit değerinden az ise true fazla olursa false döner
+     */
+    public boolean sumOfCredits(){
+
         int sumOfCredits=0;
         for (Lesson l : listOfLesson)
             sumOfCredits+=l.getCredit();
 
         if( sumOfCredits < getMaxCredit() )
-            return 1;
+            return true;
         else
-            return -1;
+            return false;
     }
 
     public String getName() {
