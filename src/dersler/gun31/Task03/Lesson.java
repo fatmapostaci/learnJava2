@@ -14,6 +14,7 @@ public class Lesson {
     private String name;
     private int credit;
 
+
     public Lesson(String name, int credit) {
         this.name = name;
         //herhangi bir ders 10 kredinin üzerinde girilirse program sonlanır

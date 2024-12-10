@@ -49,6 +49,14 @@ public class Student {
         else
             return false;
     }
+    public void addLesson(Lesson lesson){
+        if( sumOfCredits() ){
+            listOfLesson.add(lesson);
+            System.out.println( lesson.getName() + " dersi eklendi " );
+        }
+        else     System.out.println( lesson.getName() + " dersi eklenemedi " );
+
+    }
 
     public String getName() {
         return name;

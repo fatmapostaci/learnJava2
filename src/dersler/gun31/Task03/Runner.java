@@ -14,37 +14,19 @@ public class Runner {
 
     public static void main(String[] args) {
 
+
         Lesson calculus = new Lesson("Calculus", 6);
         Lesson physics = new Lesson("Physics", 4);
         Lesson biology = new Lesson("Biology", 3);
 
         Student student1 = new Student("Fatma", 10);
-/*
- ** if statement-> student objesine yeni ders eklemeden önce
- * öğrencinin toplam kredisinin 10u geçip geçmeyeceği ile karşılaştırıyoruz
- */
-        if (student1.sumOfCredits()) {
-            student1.listOfLesson.add(calculus);
-            System.out.println(calculus.getName() + " dersi eklendi.");
-            System.out.println(student1);
-        } else
-            System.out.println(calculus.getName() + " dersi eklenemedi.");
-
-
-        if (student1.sumOfCredits()) {
-            student1.listOfLesson.add(physics);
-            System.out.println(physics.getName() + " dersi eklendi.");
-            System.out.println(student1);
-        } else
-            System.out.println(physics.getName() + " dersi eklenemedi.");
-
-
-        if (student1.sumOfCredits()) {
-            student1.listOfLesson.add(biology);
-            System.out.println(biology.getName() + " dersi eklendi.");
-            System.out.println(student1);
-        } else
-            System.out.println(biology.getName() + " dersi eklenemedi.");
+        /*
+         ** if statement-> student objesine yeni ders eklemeden önce
+         * öğrencinin toplam kredisinin 10u geçip geçmeyeceği ile karşılaştırıyoruz
+         */
+        student1.addLesson(calculus);
+        student1.addLesson(physics);
+        student1.addLesson(biology);
 
 
     }
