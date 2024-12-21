@@ -91,6 +91,7 @@ public class Vehicle {
                 isAvailable = true;
         else
             isAvailable = false;
+        return isAvailable;
     }
 
     boolean returnVehicle(){

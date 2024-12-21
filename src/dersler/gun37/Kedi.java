@@ -1,7 +1,5 @@
 package dersler.gun37;
 
-import j24inheritance.inheritance2.Memeliler;
-
 public class Kedi extends Memeli {
 
 
