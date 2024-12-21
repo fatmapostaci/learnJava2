@@ -1,4 +1,4 @@
-package gun37.animals;
+package dersler.gun36.hw1;
 /*
 Task:
 Bir Animal (Hayvan) sınıfı oluşturun. Bu sınıfın:

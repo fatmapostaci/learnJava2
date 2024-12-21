@@ -1,4 +1,4 @@
-package gun37.animals;
+package dersler.gun36.hw1;
 
 public class Runner {
 
@@ -22,6 +22,10 @@ public class Runner {
         dog.sleep();
         dog.eat();
 
+
+
+
+
         System.out.println("Cat cat1 = new Cat();");
         Cat cat1 = new Cat();
         cat1.eat();
@@ -33,5 +37,11 @@ public class Runner {
         dog1.sleep();
         dog1.bark();
 
-        System.out.println(animal.eat() + "  " + cat.eat().)
+        System.out.println("------");
+        System.out.println(animal.eat() + "  " + cat.eat());
+
+        Animal cat4 = (Animal) new Cat();
+
+
+    }
 }

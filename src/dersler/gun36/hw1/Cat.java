@@ -1,4 +1,4 @@
-package gun37.animals;
+package dersler.gun36.hw1;
 
 public class Cat extends Animal {
 

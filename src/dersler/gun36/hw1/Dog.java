@@ -1,4 +1,4 @@
-package gun37.animals;
+package dersler.gun36.hw1;
 
 public class Dog extends Animal {
 
@@ -7,9 +7,9 @@ public class Dog extends Animal {
 
     }
     @Override
-    void eat(){
+    int eat(){
         System.out.println("dog eats bone");
-
+return 3;
     }
 
 }
