@@ -1,5 +1,4 @@
-package j24inheritance.inheritance3;
-
+package dersler.gun37;
 
 
 public class Runner {

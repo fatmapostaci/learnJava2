@@ -1,4 +1,4 @@
-package j25exceptions;
+package dersler.gun37;
 
 import java.util.InputMismatchException;
 import java.util.Scanner;

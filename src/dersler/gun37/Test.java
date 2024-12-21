@@ -1,7 +1,4 @@
-package j24inheritance.tasks.task02;
-
-import java.util.ArrayList;
-import java.util.List;
+package j24inheritance.tasks.task01;
 
 class Parent {
     public Parent() {
@@ -9,10 +6,8 @@ class Parent {
     }
 
     int age =56;
-
-    public List<String> display() {
+    void display() {
         System.out.println("Parent display");
-        return new ArrayList<>();
     }
 }
 
@@ -21,37 +16,34 @@ class Child extends Parent {
         System.out.println("Child Cons çalıştı");
 
     }
-    String name = "Selam";
 
     int age =26;
-
-    public ArrayList<String> display(String a) {  // Override yapmaz farklı metod gibi algılar -> overload olur child class için.
+    @Override
+    void display() {
         age =30;
         System.out.println("Child display");
-        return new ArrayList<>();
     }
 }
 
 public class Test {
     public static void main(String[] args) {
         Parent obj = new Child();
-        obj.display(); // Parent display
+        obj.display(); // Child display
         System.out.println("obj.age = " + obj.age); // 56
 
         System.out.println();
         System.out.println("task02");
         Parent obj1 = new Parent();
-
         System.out.println("obj1.age = " + obj1.age);
-        obj1.display(); // Parentta sadece bir tane display okunur
+        obj1.display();
 
         System.out.println();
         System.out.println("task03");
         Child obj2 = new Child();
         System.out.println("obj2.age = " + obj2.age);
-        obj2.display("yeni"); // Childdaki
-        obj2.display(); // Parenttaki
+        obj2.display();
         System.out.println("obj2.age = " + obj2.age);
+
 
 
     }

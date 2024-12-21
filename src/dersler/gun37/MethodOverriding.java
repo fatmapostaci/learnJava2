@@ -1,4 +1,4 @@
-package j24inheritance;
+
 
 public class MethodOverriding {
     /*
