@@ -41,6 +41,7 @@ public class C01StringBuilder {
         Duration strSuresi = Duration.between(strBasl,strBitis);
 
     StringBuilder strBuilder = new StringBuilder();
+
         LocalTime strBuildBasl = LocalTime.now();
         for (int i = 0; i<3333; i++){
         strBuilder.append(i);

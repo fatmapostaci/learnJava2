@@ -16,4 +16,4 @@ HalkBank sınıfı: Override ederek faiz oranını 7 yapın.
 
 ZiraatBank sınıfı: Override ederek faiz oranını 6 yapın.
 
-Main metodunda bu bankaların faiz oranlarını yazdırın.
+Main metodunda bu bankaların faiz ora nlarını yazdırın.
