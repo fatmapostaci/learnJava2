@@ -11,7 +11,7 @@ public interface DisDonanim {
     // Java 8 den itibaren body si olan -> concrete method oluşturabiliyoruz
     public default void anten(){ // default -> obje üzerinden çağırılan concrete metod
         System.out.println("Anteni olmayan çekmeyebilir");
-    }
+    }  //????
      public static String sisLamp(){ // static -> Interface ismiyle çağırılabilir
         return "Sisli havalarda çok işe yarar";
      }

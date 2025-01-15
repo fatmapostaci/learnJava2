@@ -1,6 +1,6 @@
 package dersler.gun41.interfaces;
 
-public class C01_Interface {
+public class C01_Interface implements DisDonanim {
     /*
     INTERFACE....
 
@@ -64,7 +64,7 @@ public class C01_Interface {
          Java hangisini sececegine karar veremez ve CTE verir. CTE almamak icin ayni isimli variable'lar kesinlikle "interface"
           isimleri kullanarak call edilmelidir.
 
-        		System.out.println(S1.RENK);-->CTE verir
+        		System.out.println(S1.RENK);-->CTE verir   //??????
 
         10)Interface yapilarda istenirse abstract olmayan concrete method creat edilebilir.
 
@@ -76,4 +76,22 @@ public class C01_Interface {
 
         11) Interface yapilarda istenirse main method tanımlanabilir ama bad practice
      */
+
+    @Override
+    public void kapi() {
+
+    }
+
+    @Override
+    public void kaporta() {
+
+    }
+
+    public static void main(String[] args) {
+        DisDonanim disDonanim = new C01_Interface();// -> Interfacelerden Obje oluşturulamaz. bu sebeple C01_Interface classı implement ederek objesini oluşturabildi
+        disDonanim.anten();  //abstract method zorunlu implement etti
+        disDonanim.kapi();   // abstract method  zorunlu implement etti
+        disDonanim.anten();  //static olmayan concrete method obje üreterek çağırılabilir
+        DisDonanim.sisLamp();  //static olduğu için Interface adı ile çağırılır
+    }
 }
