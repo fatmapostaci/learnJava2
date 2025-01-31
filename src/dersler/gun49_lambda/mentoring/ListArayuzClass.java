@@ -1,7 +1,9 @@
-package gun49.lambda.mentoring;
+package dersler.gun49_lambda.mentoring;
 
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.List;
+import java.util.function.Function;
 
 public class ListArayuzClass {
 
@@ -10,9 +12,9 @@ public class ListArayuzClass {
         List<String> stringList = new ArrayList<>(List.of("fatmaP","bilal","ahmet"));
 
         //Task1: bir list verdiğimizde listin size ını verir.
-        ListArayuz  sizeOflistArayuz = listeStrings -> {  return listeStrings.size();  };
+        ListArayuz  sizeOflist = t -> {  return t.size();  };
 
-        Integer size = sizeOflistArayuz.getLengthAbstractMethod(stringList);
+        Integer size = sizeOflist.getLengthAbstractMethod(stringList);
         System.out.println("Arraylist size = " + size);
 
         //Task2: toplam size ını bulalım
@@ -33,6 +35,20 @@ public class ListArayuzClass {
 
         Integer getFirstSize = sizeOfFirstElement.getLengthAbstractMethod(stringList);
         sizeOfFirstElement.concreteSoutMethod(getFirstSize);
+
+
+        //Task4: string al , string i arr olarak dönüştür
+        Function<String, String[]> arrayeCevir = s -> {
+            return s.replaceAll("\\p{Punct}","").replace(" ","").split("");
+        };
+
+        String[] outputArr = arrayeCevir.apply("telefonum kırıldı, çok üzgünüm");
+        System.out.println("Arrays.toString(outputArr) = " + Arrays.toString(outputArr));
+
+
+        Function<String, String> birlestir = s ->  { return s.concat("Fatma"); };
+        String birlesikKelime = birlestir.apply("Bilal ");
+        System.out.println(birlesikKelime);
 
     }
 

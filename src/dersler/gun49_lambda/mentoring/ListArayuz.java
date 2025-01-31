@@ -1,4 +1,4 @@
-package gun49.lambda.mentoring;
+package dersler.gun49_lambda.mentoring;
 
 import java.util.List;
 

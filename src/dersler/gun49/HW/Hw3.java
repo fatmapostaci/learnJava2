@@ -1,8 +1,5 @@
-package gun48.HW;
+package dersler.gun49.HW;
 
-import java.lang.reflect.Array;
-import java.util.Arrays;
-import java.util.HashMap;
 import java.util.LinkedHashMap;
 import java.util.Map;
 

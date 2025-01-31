@@ -1,4 +1,4 @@
-package gun49.lambda;
+package dersler.gun49_lambda;
 
 
 @FunctionalInterface

@@ -1,6 +1,5 @@
-package gun48;
+package dersler.gun49;
 
-import java.util.Map;
 import java.util.Scanner;
 import java.util.TreeMap;
 

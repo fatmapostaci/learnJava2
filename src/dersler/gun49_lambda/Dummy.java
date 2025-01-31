@@ -1,4 +1,4 @@
-package gun49.lambda;
+package dersler.gun49_lambda;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -23,6 +23,7 @@ public class Dummy {
         //nesne yönelimli programlama
         //jeneric programlama
         //fonksiyonel programlama
+
 
 
 
