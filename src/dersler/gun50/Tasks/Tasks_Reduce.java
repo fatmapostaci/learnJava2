@@ -24,11 +24,6 @@ public class Tasks_Reduce {
         System.out.println("****Task01****");
         //Task01-> list çift elemanlarının karelerinin en buyugunu print code create ediniz...
 
-        List<Integer> list =
-                sayiList.stream()
-                        .filter(SeedMethods::isEven)
-                        .map(SeedMethods::karesiniAl).toList();
-        System.out.println("list = " + list);
 
         Integer max = sayiList.stream()
                 .filter(SeedMethods::isEven)
@@ -51,6 +46,8 @@ public class Tasks_Reduce {
                         .reduce( (t,u)-> t>u ? t : u )
                         //.reduce(SeedMethods::maxBul)
                         ;
+        System.out.println("max2.orElse(0) = " + max2.orElse(0));
+
 
         if(max2.isPresent()) {
             System.out.println("max2.get() = " + max2.get());
@@ -68,19 +65,49 @@ public class Tasks_Reduce {
         //max2.ifPresent();
         //max2.orElseGet();
 
-
+        System.out.println("maximum = " + maximum);
 
         System.out.println("\n****Task02****");
         //Task02-> list elemanlarının toplamını  print code create ediniz...
-
+        listElemanlarininToplami(sayiList);
         System.out.println("\n****Task03****");
         //Task03-> list'in çift elemanlarının çarpımını  print code create ediniz...
+        listElemanlarininCarpimi(sayiList);
 
         System.out.println("\n****Task04****");
         //Task04-> list elemanlarının en küçüğünü  print code 4 farklı code create ediniz...
+        listElemanlarininEnKucugu(sayiList);
 
         System.out.println("\n****Task05****");
         // Task05-> List elemanlarının 25'den buyuk en kucuk tek elemanını print eden code create ediniz...  public static void main(String[] args) {
+
+    }
+
+    private static void listElemanlarininCarpimi(List<Integer> sayiList) {
+
+    }
+
+    private static void listElemanlarininEnKucugu(List<Integer> sayiList) {
+        Integer enKucuk =
+                sayiList.stream()
+                        .reduce((u,v)->u>v?v:u)
+                        .get();
+        System.out.println("enKucuk = " + enKucuk);
+
+        Optional<Integer> min =  sayiList.stream().reduce(Math::min);
+        System.out.println("min = " + min);
+
+        Integer min2 = sayiList.stream().reduce(Integer.MAX_VALUE,Math::min);
+        System.out.println("min2 = " + min2);
+
+    }
+
+    private static void listElemanlarininToplami(List<Integer> sayiList) {
+
+        Integer sum =
+                sayiList.stream()
+                        .filter(SeedMethods::isEven)
+                        .map(SeedMethods::karesiniAl).reduce(0,Math::addExact);
 
     }
 }

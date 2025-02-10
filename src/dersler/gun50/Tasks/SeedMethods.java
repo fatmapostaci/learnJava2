@@ -6,7 +6,7 @@ import java.util.function.Predicate;
 public class SeedMethods {
 
     public static  <T> void yazdir(T element){
-        System.out.print(" " + element);
+        System.out.print(element);
     }
 
     public static boolean isEven(int number){

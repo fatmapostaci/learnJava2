@@ -1,7 +1,9 @@
-package dersler.gun49_lambda;
+package dersler.gun49_lambda.tasks;
 
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.List;
+import java.util.function.Function;
 
 public class Dummy {
     public static void main(String[] args) {
@@ -24,7 +26,11 @@ public class Dummy {
         //jeneric programlama
         //fonksiyonel programlama
 
+//fonksiyon ar
+        Function<String, String[]> func = s -> { return s.split(" "); };
 
+        String str = "Fatma Postacı iş hayatına dönüyor";
+        System.out.println(Arrays.toString(func.apply(str)));
 
 
     }

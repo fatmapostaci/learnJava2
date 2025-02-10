@@ -1,4 +1,4 @@
-package dersler.gun49_lambda;
+package dersler.gun49_lambda.tasks;
 
 public class MathOperationsImpl {
 
@@ -7,8 +7,16 @@ public class MathOperationsImpl {
 
 
 
+
+
+
+
+
+
+        MathOperations mathOperations =
+                (a,b)-> {return a+b;};
         //kendi fonksiyonel arayüzümü tanımlayıp lambda ifadesi ile kullanalım
-        MathOperations sum =   (a,b) -> {return a+b;};
+        MathOperations sum =   (a, b) -> {return a+b;};
 
         double toplam = sum.calculate(4,5);
 
