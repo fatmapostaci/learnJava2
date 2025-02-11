@@ -1,7 +1,8 @@
-package j29collections.tasks;
 
 import java.util.Arrays;
 import java.util.HashSet;
+import java.util.List;
+import java.util.Set;
 
 public class Task08 {
         /* TASK :
@@ -15,17 +16,25 @@ public class Task08 {
      */
 
     public static void main(String[] args) {
+
+
         Double[] dArr = new Double[]{3.23 , 3.10 , 5.12 , 10.12 , 23.12};
-        HashSet<Double> hashSet = setOlustur(dArr);
+        Set<Double> hashSet = setOlustur(dArr);
         System.out.println(toplaminiAl(hashSet));
+
+
+//LAMBDA İLE COZUM
+        double toplam = hashSet.stream().reduce((a, b) -> a + b).get();
+        System.out.println("lambda ile toplam = " + toplam);
     }
 
-    private static HashSet<Double> setOlustur(Double [] arr) {
+    private static Set<Double> setOlustur(Double [] arr) {
         return  new HashSet<>(Arrays.asList(arr));
     }
 
-    private static Double toplaminiAl(HashSet<Double> hashSet) {
-        Double toplam=0.0;
+    private static Double toplaminiAl(Set<Double> hashSet) {
+
+         Double toplam=0.0;
         for (Double d : hashSet){
             toplam+=d;
         }

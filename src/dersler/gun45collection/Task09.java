@@ -29,13 +29,26 @@ public class Task09 {
         arrList.clear();
         arrList.addAll(arrList2);
 
+        Random rand = new Random();
+        ArrayList<Integer> arr = new ArrayList<>();
+        for (int i=0;i<30;i++) {
+
+            arr.add((rand.nextInt(10)+1));
+        }
+        System.out.println("arr = " + arr);
+        Set<Integer> randomSet = new HashSet<>(arr);
+        arr.clear();
+        arr.addAll( randomSet);
+        System.out.println("randomSet = " + randomSet);
+        System.out.println("arr = " + arr);
+
 
     }
 
     private static ArrayList<Integer> uniqueElementArr(ArrayList<Integer> arrList) {
         ArrayList<Integer> copyArr = new ArrayList<>(arrList);
         Collections.sort(copyArr);
-        System.out.println(copyArr);
+        System.out.println("copyArr " + copyArr);
 
         for (int i = 0; i< copyArr.size()-1; i++){
             if (copyArr.get(i)== copyArr.get(i+1)){

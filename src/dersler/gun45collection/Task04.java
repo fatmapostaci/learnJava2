@@ -16,7 +16,8 @@ public class Task04 {
     cevap: 5
      */
 
-    public static void main(String[] args) {
+
+   public static void main(String[] args) {
         HashSet<Integer> hs = new HashSet<>(List.of(4,2,3,1,7));
         int size = totalCount(hs);
         System.out.println("size = " + size);

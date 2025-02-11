@@ -1,15 +1,23 @@
-package j29collections.tasks;
 
-import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.HashSet;
-import java.util.List;
+
+import java.util.*;
 
 public class Task06 {
     // Step 1 : bir metod oluşturup bir HashSet i
     // verilen bu numaralar ile doldurunuz [1, 2, 3, 4, 5, 5, 5, 6, 7, 8]
     // bu işlemi generateSet() metodunda yapınız.mainden yazdırınız.
 
+    public static void main(String[] args) {
+
+        Set<Integer> hashSet = createHashSet(1, 2, 3, 4, 5, 5, 5, 6, 7, 8);
+    }
+
+    private static Set<Integer> createHashSet(Integer...nums) {
+
+        return new HashSet<>(List.of(nums));
+
+    }
+    /*
     public static void main(String[] args) {
         // Fatma Hanımın yöntemi
         List<Integer> arrayList = new ArrayList<>(Arrays.asList(1, 2, 3, 4, 5, 5, 5, 6, 7, 8));
@@ -52,7 +60,7 @@ public class Task06 {
 // Dizi tipindeki dizi, arraylist, set map ler i fonksiyona gönderdiğinizde
 // fonksiyona referansın kopyası gittiği için yapılan değişiklikler kendisinde yapılmış olur (kopya referans da
 // aynı diziyi işaret eder) bu değişkenleri RETURN etmenize gerek yoktur.
-
+*/
 }
 
 

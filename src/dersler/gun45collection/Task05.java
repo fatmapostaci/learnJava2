@@ -1,6 +1,7 @@
-package j29collections.tasks;
+
 
 import java.util.*;
+import java.util.stream.Collectors;
 
 public class Task05 {
 
@@ -17,6 +18,70 @@ public class Task05 {
     CEVAP: "peach" , "strawberry" , "kiwi" , "pineapple"
      */
 
+
+    public static void main(String[] args) {
+
+        Set<String> set = new HashSet<>(List.of("banana", "banana", "strawberry", "kiwi", "pineapple"));
+        System.out.println("set = " + set);
+        List<String> list = new ArrayList<>(set);
+
+
+//HASHSET İLE ÇÖZÜMÜ
+        if (set.contains("banana")) {
+            set.remove("banana");
+            set.add("peach");
+        }
+        System.out.println("set contains ile çözümü= " + set);
+
+
+
+// ITERATOR ILE COZUMU
+        Iterator<String> itr = set.iterator();
+        boolean kaldırıldıIse = false;
+        while (itr.hasNext()) {
+            String meyve = itr.next();
+            if (meyve.equals("banana")) {
+                itr.remove();
+                kaldırıldıIse = true;
+            }
+        }
+        //add komutu iterator içinde kullandığımda hata aldığı için kaldırma işlemi gerçekşti ise döngü bittikten sonra add methodu ile ekleriz
+        if (kaldırıldıIse) set.add("peach");
+        System.out.println("set iterator ile çözümü = " + set);
+
+
+//LAMBDA VERSION--------------------------------------------
+        // aynı işlemin lambda ile yapılışı
+        set = set.stream().map(s -> s.equals("banana") ? "peach" : s).collect(Collectors.toSet());
+        System.out.println("set = " + set);
+
+        list = list.stream().map(s -> s.equals("banana") ? "peach" : s).collect(Collectors.toList());
+        System.out.println("list1 = " + list);
+
+        list.replaceAll(s -> s.equals("banana") ? "peach" : s);
+        System.out.println("list2 = " + list);
+
+
+    }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    /*
     public static void main(String[] args) {
         HashSet<String > hs = new HashSet<>(Arrays.asList("banana" , "strawberry" , "kiwi" , "pineapple"));
         String str1 = "banana";
@@ -28,6 +93,8 @@ public class Task05 {
 
         changeSet2(hs,str1,str2);
         //System.out.println(hs);
+        }
+     */
 
 /*
 1. changeSet2 (Return Etmeyen Metot)
@@ -65,14 +132,10 @@ HashSet'in durumunun birden fazla yerden erişilebilir olduğu bir senaryoda, do
   */
 
 
-
-
-    }
-
     private static void changeSet2(HashSet<String> hs, String str1, String str2) {
         // Set
-        for (String meyve:hs){
-            if (meyve.equals(str1)){
+        for (String meyve : hs) {
+            if (meyve.equals(str1)) {
                 hs.remove(str1);
                 hs.add(str2);
                 return;
@@ -82,14 +145,14 @@ HashSet'in durumunun birden fazla yerden erişilebilir olduğu bir senaryoda, do
 
     private static HashSet<String> changeSet(HashSet<String> hs, String str1, String str2) {
         // Set
-        for (String meyve:hs){
-            if (meyve.equals(str1)){
+        for (String meyve : hs) {
+            if (meyve.equals(str1)) {
                 hs.remove(str1);
                 hs.add(str2);
                 return hs;
             }
         }
-        System.out.println("verilen "+ str1+ "listede bulunamadı");
+        System.out.println("verilen " + str1 + "listede bulunamadı");
         return hs;
     }
 }
